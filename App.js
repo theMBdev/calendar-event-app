@@ -4,12 +4,14 @@ import { createStackNavigator, createAppContainer } from 'react-navigation';
 import * as Permissions from 'expo-permissions';
 import Home from './screens/Home';
 import CreateTask from './screens/CreateTask';
+import MyAttempt from './screens/MyAttempt';
 import TodoStore from './data/TodoStore';
 
 const AppNavigator = createStackNavigator(
   {
     Home,
     CreateTask,
+    MyAttempt,
   },
   {
     headerMode: 'none',
@@ -36,11 +38,30 @@ export default class App extends Component {
     await Permissions.askAsync(Permissions.REMINDERS);
   };
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   render() {
     return (
-      <TodoStore>
-        <AppContainer />
-      </TodoStore>
+      // <TodoStore>
+      //   <AppContainer />
+      // </TodoStore>
+    < MyAttempt />
+
     );
   }
 }
